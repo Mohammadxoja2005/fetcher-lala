@@ -36,30 +36,6 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
         }
     }
 
-    // const checkResult = async () => {
-    //     let isCancel = false;
-
-    //     try {
-    //         const result = await loaderExecution();
-    //         if (!result) {
-    //             isCancel = true;
-    //             return;
-    //         }
-
-    //         queueMicrotask(() => {
-    //             setChild(result);
-    //         })
-    //     } catch (error) {
-    //         setIsError(true);
-    //         throw error;
-    //     } finally {
-    //         if (!isCancel) {
-    //             setLoading(false);
-    //         }
-    //     }
-    // }
-
-
     useEffect(() => {
         loaderExecution()
     }, [payload, ...deps])
