@@ -21,6 +21,7 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
 
             if (!result) isCancel = true;
 
+            // flushSync is used to prevent batching  
             queueMicrotask(() => flushSync(() => {
                 setChild(result);
             }))
