@@ -19,12 +19,15 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
         try {
             const result = await children(payload!);
 
-            if (!result) isCancel = true;
+            if (!result) {
+                isCancel = true
+                return;
+            };
 
-            // flushSync is used to prevent batching  
-            queueMicrotask(() => flushSync(() => {
+            // flushSync is used to prevent batching
+            flushSync(() => {
                 setChild(result);
-            }))
+            })
 
         } catch (error) {
             setIsError(true);
