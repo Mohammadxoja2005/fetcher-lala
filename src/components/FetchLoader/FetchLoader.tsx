@@ -1,4 +1,5 @@
 import { ReactNode, useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 
 interface IFetchLoaderProps<T> {
     Loader: () => ReactNode;
@@ -18,11 +19,11 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
         try {
             const result = await children(payload!);
 
-            if (!result) isCancel = true; 
-            
-            queueMicrotask(() => {
+            if (!result) isCancel = true;
+
+            queueMicrotask(() => flushSync(() => {
                 setChild(result);
-            })
+            }))
 
         } catch (error) {
             setIsError(true);
