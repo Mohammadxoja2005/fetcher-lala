@@ -1,6 +1,6 @@
 {
-  "name": "fetchloader",
-  "private": true,
+  "name": "fetcher",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
