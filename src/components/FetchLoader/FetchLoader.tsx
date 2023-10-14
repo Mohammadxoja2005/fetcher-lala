@@ -6,10 +6,11 @@ interface IFetchLoaderProps<T> {
     children: (p: any) => Promise<ReactNode> | Promise<void>;
     payload?: T;
     deps?: any[];
+    errorText?: string
 }
 
 export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
-    const { children, Loader, payload, deps = [] } = props;
+    const { children, Loader, payload, deps = [], errorText } = props;
     const [loading, setLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     const [child, setChild] = useState<any>();
@@ -44,7 +45,9 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
     }, [payload, ...deps])
 
     if (isError) {
-        return "Error happened during fetching, please check your API or internet connection";
+        return errorText ?
+            errorText :
+            "Error happened during fetching, please check your API or internet connection";
     }
 
     if (loading) {
