@@ -1,7 +1,7 @@
 import FetchLoader from './components/FetchLoader';
 import axios from 'axios';
 // import {FetchLoader}
-// import { } from "fetcher-lala";
+// import { FetchLoader } from "fetcher-lala";
 
 function App() {
 
