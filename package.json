@@ -9,6 +9,8 @@
     "url": "https://github.com/Mohammadxoja2005/FetchLoader"
   },
   "source": "src/index.ts",
+  "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
