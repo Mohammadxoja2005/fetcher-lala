@@ -27,32 +27,6 @@ function App() {
         }}
       </FetchLoader>
 
-      <FetchLoader
-        Loader={() => {
-          return (
-            <>
-              Loading...
-            </>
-          )
-        }}
-      >
-        {async () => {
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-          await axios.get('https://jsonplaceholder.typicode.com/comments');
-
-          return (
-            <>Hello</>
-          )
-        }}
-      </FetchLoader>
-
       <br />
       <>this is App.tsx</>
     </>

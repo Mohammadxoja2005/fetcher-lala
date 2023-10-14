@@ -9,7 +9,7 @@ interface IFetchLoaderProps<T> {
     errorText?: string
 }
 
-export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>) => {
+export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>): any => {
     const { children, Loader, payload, deps = [], errorText } = props;
     const [loading, setLoading] = useState(true);
     const [isError, setIsError] = useState(false);
