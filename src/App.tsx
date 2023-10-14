@@ -1,5 +1,6 @@
 import FetchLoader from './components/FetchLoader';
 import axios from 'axios';
+// import {FetchLoader}
 
 function App() {
 
