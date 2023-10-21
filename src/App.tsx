@@ -1,10 +1,12 @@
 import React from "react"
 import axios from 'axios'
+import {FetchLoader} from "fetcher-lala";
+ 
 
 function App() {
   return (
     <>
-      {/* <FetchLoader
+      <FetchLoader
         Loader={() => (<>Loading...</>)}
       >
         {async () => {
@@ -24,10 +26,7 @@ function App() {
             </>
           )
         }}
-      </FetchLoader> */}
-      {/* <FetchLoader>
-
-      </FetchLoader> */}
+      </FetchLoader>
       <>this is App.tsx</>
     </>
   )

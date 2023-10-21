@@ -1,3 +1,1 @@
-export * from "./components/FetchLoader";
-
-export { default } from "./components/FetchLoader";
+export {FetchLoader} from "./components"
