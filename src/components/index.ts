@@ -1,1 +1,2 @@
-export {FetchLoader} from "./FetchLoader"
+import FetchLoader from "./FetchLoader";
+export default FetchLoader

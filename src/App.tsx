@@ -1,6 +1,6 @@
 import React from "react"
-import axios from 'axios' 
-import {FetchLoader} from "./components"
+import axios from 'axios'  
+import FetchLoader from "./components"
 
 function App() {
   return (
