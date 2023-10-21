@@ -9,5 +9,5 @@ declare module 'fetcher-lala' {
         errorText?: string
     }
 
-    export const FetchLoader: <T extends {}>() => JSX.Element; 
+    export const FetchLoader: (children: (p: any) => Promise<ReactNode> | Promise<void>) => JSX.Element; 
 }
