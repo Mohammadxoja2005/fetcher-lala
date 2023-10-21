@@ -1,6 +1,6 @@
 import React from "react"
 import axios from 'axios' 
-import {FetchLoader} from "fetcher-lala";
+import {FetchLoader} from "./components";
 import { Async } from "react-declarative";
 
 function App() {
