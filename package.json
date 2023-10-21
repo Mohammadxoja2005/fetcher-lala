@@ -2,7 +2,7 @@
   "name": "fetcher-lala",
   "private": false,
   "version": "0.0.29",
-  "main": "dist/assets/index-b9668f6c.js",
+  "main": "dist/assets/index-4f661119.js",
   "type": "module",
   "source": "src/index.ts",
   "typings": "src/index.d.ts",
