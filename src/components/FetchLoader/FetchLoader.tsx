@@ -60,5 +60,3 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>): any => {
         )
     }
 }
-
-export default FetchLoader;
