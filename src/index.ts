@@ -1,1 +1,1 @@
-export {FetchLoader} from "./components"
+export * from "./components"
