@@ -6,12 +6,10 @@
   "type": "module",
   "source": "src/index.ts",
   "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/Mohammadxoja2005/FetchLoader"
-  },
-  "exports": {
-    "types": "./src/index.d.ts"
   },
   "scripts": {
     "dev": "vite",
