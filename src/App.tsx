@@ -1,6 +1,7 @@
 import React from "react"
 import axios from 'axios'  
 import FetchLoader from "./components"
+// import FetchLoader from "fetcher-lala"
 
 function App() {
   return (

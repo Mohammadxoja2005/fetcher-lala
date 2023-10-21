@@ -9,5 +9,5 @@ declare module 'fetcher-lala' {
         errorText?: string
     }
 
-    export const FetchLoader: <T extends {}>({Loader, children, payload, deps, errorText}: IFetchLoaderProps<T>) => JSX.Element; 
+    export default function FetchLoader<T extends {}>({Loader, children, payload, deps, errorText}: IFetchLoaderProps<T>); 
 }
