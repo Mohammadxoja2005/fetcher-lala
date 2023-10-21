@@ -1,1 +1,1 @@
-export * from "./FetchLoader";
+export {FetchLoader} from "./FetchLoader";
