@@ -1,17 +1,14 @@
-import FetchLoader from './components/FetchLoader';
-import axios from 'axios';
-// import {FetchLoader}
-// import { FetchLoader } from "fetcher-lala";
+import React from "react"
+import axios from 'axios'
 
 function App() {
-
   return (
     <>
-      <FetchLoader
+      {/* <FetchLoader
         Loader={() => (<>Loading...</>)}
       >
         {async () => {
-          const list = await axios.get('https://jsonplaceholder.typicode.com/posts');
+          const list = await axios.get('https://jsonplaceholder.typicode.com/posts')
 
           return (
             <>
@@ -27,9 +24,10 @@ function App() {
             </>
           )
         }}
-      </FetchLoader>
+      </FetchLoader> */}
+      {/* <FetchLoader>
 
-      <br />
+      </FetchLoader> */}
       <>this is App.tsx</>
     </>
   )

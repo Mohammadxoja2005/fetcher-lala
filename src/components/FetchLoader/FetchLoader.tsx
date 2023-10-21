@@ -1,22 +1,22 @@
-import { ReactNode, useEffect, useState } from "react";
-import { flushSync } from "react-dom";
+import { ReactNode, useEffect, useState } from "react"
+import { flushSync } from "react-dom"
 
 interface IFetchLoaderProps<T> {
-    Loader: () => ReactNode;
-    children: (p: any) => Promise<ReactNode> | Promise<void>;
-    payload?: T;
-    deps?: any[];
+    Loader: () => ReactNode
+    children: (p: any) => Promise<ReactNode> | Promise<void>
+    payload?: T
+    deps?: any[]
     errorText?: string
 }
 
 export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>): any => {
-    const { children, Loader, payload, deps = [], errorText } = props;
-    const [loading, setLoading] = useState(true);
-    const [isError, setIsError] = useState(false);
-    const [child, setChild] = useState<any>();
+    const { children, Loader, payload, deps = [], errorText } = props
+    const [loading, setLoading] = useState(true)
+    const [isError, setIsError] = useState(false)
+    const [child, setChild] = useState<any>()
 
     const loaderExecution = async () => {
-        let isCancel = false;
+        let isCancel = false
         try {
             const result = await children(payload!);
 
@@ -31,11 +31,11 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>): any => {
             })
 
         } catch (error) {
-            setIsError(true);
+            setIsError(true)
             throw error;
         } finally {
             if (!isCancel) {
-                setLoading(false);
+                setLoading(false)
             }
         }
     }
@@ -47,7 +47,7 @@ export const FetchLoader = <T extends {}>(props: IFetchLoaderProps<T>): any => {
     if (isError) {
         return errorText ?
             errorText :
-            "Error happened during fetching, please check your API or internet connection";
+            "Error happened during fetching, please check your API or internet connection"
     }
 
     if (loading) {
