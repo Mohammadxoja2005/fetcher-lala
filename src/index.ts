@@ -1,3 +1,1 @@
-import { FetchLoader } from "./components"
-
-export default FetchLoader;
+export { FetchLoader } from "./components"
